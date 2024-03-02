@@ -1,0 +1,13 @@
+h3{
+    color: rgba(255, 0, 132, 0.427);
+}
+.odd{
+    color: rgb(10, 9, 9);
+}
+.even{
+    color: rgb(41, 41, 155);
+}
+
+#try{
+    color: green;
+}
