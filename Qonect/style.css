@@ -11,3 +11,23 @@ h3{
 #try{
     color: green;
 }
+.logo123{
+    width: 100%;
+    height: 100%;
+
+}
+
+.d1{
+    background-color: yellowgreen;
+    width: 60%;
+    height: 450px;
+}
+
+.d2{
+    width: 40vw;
+    height: 70vh;
+}
+
+.makingit{
+    font-size: 7em;
+}
