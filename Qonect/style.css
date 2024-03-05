@@ -26,9 +26,9 @@ body{
 
 .main-home{
     position: absolute;
-    width: calc(1001%-300px);
+    width: calc(90% - 300px);
     top:0;
-    left: 300px;
+    left: 350px;
     background: #fff;
     border-radius: 1rem 0 0 1rem;
     z-index: 1000;
@@ -69,7 +69,7 @@ body{
 .name{
     display: flex;
     align-items: center;
-    margin: 1rem 0 0 1rem;
+    margin: 1rem 0 0 4rem;
 }
 
 .name h1{
@@ -136,6 +136,231 @@ body{
     background: #e2336b;
 }
 
+.main-home{
+    padding: 20px;
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    width: 200px;
+    height: 2.4rem;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.search input{
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 7px;
+}
+
+.search o{
+    font-size: 20px;
+}
+
+.header-content{
+    display: flex;
+    align-self: center;
+}
+
+.header-contect i{
+    color: #000;
+    font-size: 20px;
+    margin-left: 1rem;
+}
+
+.header-contect .btn{
+    display: flex;
+    align-self: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--gradient);
+    margin-left: 1rem;
+}
+
+.header-contect .btn i{
+    color: hsla(0, 0%, 100%, 0.6);
+    margin-left: 10px;
+
+}
+
+.btn-text{
+    color: #fff;
+}
+
+
+/* stories */
+.stories-title{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.stories-title h1{
+    font-size: 1.8rem
+
+}
+
+.stories-title .btn{
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+.stories-title .btn i{
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.stories{
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    margin-top: 2rem;
+}
+
+.stories-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #e2336b;
+}
+.stories-img img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center;
+}
+
+.stories-img .color{
+    border: 2px solid #dbdbdb;
+}
+.stories-img .add{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: #fff;
+    background: hsla(246, 100%, 67%, 0.7);
+}
+
+
+.feed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.feed h1{
+    font-size: 1.7rem;
+
+}
+
+.feed-text{
+    display: flex;
+    align-items: center;
+}
+
+.feed-text h2{
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.feed-text span{
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+}
+
+
+.main-post{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    gap: 11px;
+}
+
+.post-box{
+    width: 300px;
+}
+
+.post-box img{
+    width: 100%;
+    height: 344px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+
+}
+
+.post-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #e2336b;
+}
+
+.post-img img{
+    width: 27px;
+    height: 27px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center;
+
+}
+
+.post-profile{
+    display: flex;
+    align-items: center;
+}
+
+.post-profile h3{
+    font-size: 12px;
+    font-weight: 600px;
+    margin-left: 5px;
+}
+
+
+.likes{
+    display: flex;
+    align-items: center;
+}
+
+.likes i{
+    font-size: 20px;
+    margin-left: 7px;
+}
+
+.like span{
+    font-size: 14px;
+    margin-left: 7px;
+}
 
 
 
