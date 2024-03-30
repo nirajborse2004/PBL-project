@@ -1,0 +1,27 @@
+.toolbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.select-font, .select-size {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.editor {
+    border: 1px solid #ccc;
+    min-height: 200px;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 12pt;
+}

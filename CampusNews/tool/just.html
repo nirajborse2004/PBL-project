@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CampusNews/tool/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="toolbar">
+        <button class="btn bold-btn" onclick="execCmd('bold')">Bold</button>
+        <button class="btn italic-btn" onclick="execCmd('italic')">Italic</button>
+        <button class="btn underline-btn" onclick="execCmd('underline')">Underline</button>
+        <select class="select-font" onchange="execCmdWithArg('fontName', this.value)">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+        <select class="select-size" onchange="execCmdWithArg('fontSize', this.value)">
+            <option value="1">8pt</option>
+            <option value="2">10pt</option>
+            <option value="3">12pt</option>
+        </select>
+    </div>
+    <div contenteditable="true" class="editor" id="editor"></div>
+    <script src="/CampusNews/tool/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+header{
+    background: #016dac;
+}
+header *{
+    color: white;
+}
+.logo{
+    float: left;
+    height: inherit;
+    height: 2em;
+    color: white;
+}
+h1 .logo-text{
+    float: left;
+    color: white;
+}
+
+.admin-wrapper{
+    display: flex;
+    height: 100vh;
+}
+
+
+.admin-wrapper .left-sidebar{
+    flex: 2;
+    height: 100%;
+    background: #2492d1;
+}
+
+.admin-wrapper .left-sidebar ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+.admin-wrapper .left-sidebar ul li a{
+    padding: 20px;
+    display: block;
+    border-bottom: 1px solid #016dac;
+}
+.admin-wrapper .left-sidebar ul li a:hover{
+    background: #38b6ff;
+}
+.admin-wrapper .admin-content{
+    flex: 8;
+    height: 100%;
+    padding: 40px 100px 100px;
+    overflow-y: scroll;
+}
+
+.admin-content .page-title{
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 3.5px 4px 5px #91ccee;
+    margin-bottom: 1.5rem;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+}
+
+
+th, td{
+    padding: 15px;
+    text-align: left;
+    color: #38b6ff;
+    border-bottom: 1.5px solid #91ccee;
+}
+
+.edit{
+    color: #2492d1;
+}
+.delete{
+    color: red;
+}
+.publish{
+    color: #016dac;
+}
+
+
+.edit:hover,
+.delete:hover,
+.publish:hover{
+    text-decoration: underline;
+}
+
+
+
+

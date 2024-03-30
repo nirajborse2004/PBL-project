@@ -68,35 +68,33 @@ header{
     z-index: 1;
 }
 header *{
-    color: white;
+    color: #38b6ff;
 }
 .logo{
     float: left;
     height: inherit;
     height: 2em;
-
 }
-h1  .logo-text{
+h1 .logo-text{
     float: left;
     margin: 50%;
     font-family: 'Candal';
-
 }
-.logo-text  span{
-    color: rgb(221, 157, 157);
+.logo-text span{
+    color: white;
 }
-header  ul{
+header ul{
     float:right;
     margin: 0px;
     padding: 0px;
     list-style: none;
 }
-header  ul  li{
+header ul li{
     float: left;
     position: relative;
     z-index: 1;
 }
-header  ul  li ul {
+header ul li ul{
     position: absolute;
     right: 0px;
     width: 180px;
@@ -104,37 +102,44 @@ header  ul  li ul {
     display: none;
     z-index: 10000;
 }
-header  ul  li:hover  ul{
+header ul li:hover ul{
     display: block;
 }
-header  ul  li ul  li{
+header ul li ul li{
     width: 100%;
 }
-header  ul  li ul  li a{
+header ul li ul li a{
     padding: 10px;
-    color: white;
+    color: #38b6ff;
 }
-header  ul  li ul  li a.logout{
+header ul li ul li a.logout{
+    z-index: 10000;
     color: red;
 }
-header  ul  li ul  li a:hover{
+header ul li ul li a.logout:hover{
+    z-index: 10000;
     color: white;
-    background: rgb(95, 1, 1);
+    background: red;
 }
-header  ul  li a{
+header ul li ul li a:hover{
+    color: white;
+    background: #2db2ff;
+}
+header ul li a{
     display:block;
     padding: 21px;
     font-size: 1.1em;
     text-decoration: none;
 }
-header  ul  li a:hover{
+header ul li a:hover{
     color: white;
-    background: rgb(73, 1, 1);
+    background: #2db2ff;
     transition: 0.5s;
 }
-header  .fa-solid{
+header .fa-solid{
     display: none;
 }
+
 header .menu-toggle{
     display: none
 }
@@ -161,10 +166,7 @@ header .menu-toggle{
 }
 .new h1:hover{
     color: transparent;
-    transform: scale(.9);
-    /*
-    stroke:2px;
-    */
+    transform: scale(0.9);
     outline: 2px 2px 4px #000000;
     -webkit-text-stroke: 2px #fff;
 }
