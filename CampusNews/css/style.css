@@ -600,7 +600,7 @@ body .backvideo{
 }
 
 .item-list {
-    margin-top: 11vh;
+    margin-top: 0;
     padding-left: 240px;
     text-align: left;
     list-style: none;
@@ -610,6 +610,8 @@ body .backvideo{
 .item {
     line-height: 80px;
     margin: 0;
+    font-size: 60px;
+    text-align: center;
 }
 
 @keyframes opacity {
