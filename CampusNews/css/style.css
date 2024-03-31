@@ -34,6 +34,8 @@ a{
     display: block;
 }
 
+
+
 .btn{
     padding: 0.5rem 1rem;
     color: white;
@@ -435,7 +437,7 @@ body .backvideo{
 
 /* footer ----------------------------------------------------------------------------------------*/
 .footer{
-    background:#303036;
+    background:#38b6ff;
     margin-top: 2080px;
     color:#ffffff;
     height: 400px ;
@@ -469,9 +471,9 @@ body .backvideo{
 }
 
 .footer .footer-content .about .socials a {
-    border: 1px solid gray;
+    border: 1px solid white;
     width: 45px;
-    height: 30px;
+    height: 37px;
     padding-top: 5px;
     margin-right: 5px;
     text-align: center;
@@ -496,8 +498,8 @@ body .backvideo{
 }
 
 .footer .footer-content .contact-form .contact-input {
-    background: #272727;
-    color: #bebdbd;
+    background: white;
+    color: #38b6ff;
     margin-bottom: 10px;
     line-height: 1.5rem;
     padding: .9rem 1.4rem;
@@ -510,6 +512,7 @@ body .backvideo{
 
 
 .footer .footer-content .contact-form .contact-btn {
+    border: 1px solid white;
     float: right;
 }
 
@@ -523,8 +526,8 @@ body .backvideo{
 
 
 .footer .footer-bottom {
-    background: #343a40;
-    color: #686868;
+    background: #0066a1;
+    color: white;
     height: 50px;
     width: 100%;
     position: absolute;
@@ -539,8 +542,7 @@ body .backvideo{
     min-height: 100%;
 }
 .page-wrapper a:hover {
-
-    color: #006669
+    color: #006669;
 }
 
 
@@ -551,6 +553,78 @@ body .backvideo{
     line-height: 1.3rem;
 }
 
+/* --------------------------------------update---------------- */
+
+.newtext {
+    position: absolute;
+    font-size: 60px;
+    color: #38b6ff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow:hidden;
+}
+
+.newcontainer {
+    font-weight: 600;
+    overflow: hidden;
+    height: 80px;
+    padding: 5px 40px 5px;
+    position: relative;
+}
+
+.newcontainer:before ,.newcontainer:after{
+    content: '[';
+    position: absolute;
+    left: 0px;
+    color: #2db2ff;
+    font-size: 60px;
+    line-height: 65px;
+    animation: opacity 2s infinite;
+    z-index: -1;
+}
+
+
+.newcontainer:after {
+    content: ']';
+    left:auto;
+    right:0;
+    top:0em;
+    z-index: -1;
+}
+
+.newstatic-text {
+    display: inline;
+    float: left;
+    margin: 0;
+}
+
+.item-list {
+    margin-top: 11vh;
+    padding-left: 240px;
+    text-align: left;
+    list-style: none;
+    animation: change 10s infinite;
+}
+
+.item {
+    line-height: 80px;
+    margin: 0;
+}
+
+@keyframes opacity {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes change {
+    0%, 12.66%, 100% { transform: translate(0, 0); }
+    16.66%, 29.32% { transform: translate(0, -25%); }
+    33.32%, 45.98% { transform: translate(0, -50%); }
+    49.98%, 62.64% { transform: translate(0, -75%); }
+    66.64%, 79.3% { transform: translate(0, -50%); }
+    83.3%, 95.96% { transform: translate(0, -25%); }
+}
 
 
 
