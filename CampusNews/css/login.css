@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('3398605.jpg') no-repeat;
+    background: url('/CampusNews/images/background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
