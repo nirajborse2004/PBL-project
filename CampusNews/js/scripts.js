@@ -34,9 +34,6 @@ $(document).ready(function(){
                     slidesToScroll: 1
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 
@@ -44,19 +41,7 @@ $(document).ready(function(){
 
 
 ClassicEditor
-                .create( document.querySelector( '#editor' ), {
-                    ckbox: {
-                        tokenUrl: 'https://your.token.url',
-                        theme: 'lark'
-                    },
-                    toolbar: [
-                        'ckbox', 'imageUpload', '|', 'heading', '|', 'undo', 'redo', '|', 'bold', 'italic', '|',
-                        'blockQuote', 'indent', 'link', '|', 'bulletedList', 'numberedList'
-                    ],
-                } )
-                .catch( error => {
-                    console.error( error );
-                } );
-
-
-                
+                                .create( document.querySelector( '#editor' ) )
+                                .catch( error => {
+                                        console.error( error );
+                                } );
