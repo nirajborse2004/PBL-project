@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trend Dosa</title>
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+	<header>
+		<!-- LOGO -->
+		<div class="logo" onClick="document.body.classList.toggle('bt')">
+			<h1 class="txt1">Tren<span>DOSA</span></h1>
+		</div>
+
+		<!-- Toggle Btn -->
+		<i class="fa fa-bars menu-toggle" onClick="document.getElementById('nav').classList.toggle('showing')"></i>
+
+		<!-- Link sections -->
+		<div class="nav" id="nav">
+				<ul>
+					<li>
+						<a href="#">HOME</a>
+						<!--
+						                    <ul>
+						                        <li><a href="#">LANDING PAGE</a></li>
+						                        <li><a href="#">ABOUT</a></li>
+						                    </ul>
+						                    -->
+					</li>
+					<li>
+						<a href="#">ABOUT</a>
+					</li>
+					<li>
+						<a href="#">SERVICES</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-user"></i>
+							USER-NAME
+							<i class="fa fa-chevron-down"></i>
+						</a>
+						<ul>
+							<li><a href="#">DASHBOARD</a></li>
+							<li><a href="#" class="logout">LOG-OUT</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		<!-- nav-back-bc-->
+		<video class="navbg"  autoplay loop muted plays-inline>
+	        <source id="src" src="i/ttv.mp4" type="video/mp4">
+	    </video>
+	</header>
+	
+	
+	<!--
+	Dummy txt out header
+	-->
+	
+	
+	
+	<!-- Landing-Video -->
+	<div class="video-img-pallet">
+		<div class="video-img-tint">
+			<h1 onMouseOver="document.getElementById('vid').pause();" onMouseOut="document.getElementById('vid').play();" class="big-logo">TrenDOSA</h1>
+		</div>
+		<video id="vid"  autoplay loop muted plays-inline>
+        	<source id="src" src="i/clg.mp4" type="video/mp4">
+  		</video>
+		<!--
+		-->
+	</div>
+    <!-- OR 
+	<div class="landing-img">
+		<h1 onMouseOver="document.getElementById('vid').pause();" onMouseOut="document.getElementById('vid').play();" class="big-logo">
+			TrenDOSA
+		</h1>
+	</div>
+    -->
+	
+	
+	<!-- Page wrapper -->
+	<div class="page-wrapper">
+		<!-- post slider -->
+		<div class="post-slider">
+			<h1 class="slider-title">Treanding Posts</h1>
+			<i class="fas fa-chevron-left prev"></i>
+			<i class="fas fa-chevron-right next"></i>
+			
+			<div class="post-wrapper">
+				<div class="post">
+					<img src="i/beauty.jpeg" alt="" class="slider-image">
+					<div class="post-info">
+						<h4><a href="single.html">One Image 100 days and hundered takes</a></h4>
+						<i class="far fa-user">Robert Frost</i>
+						&nbsp;
+						<i class="far fa-calender">Mar 8,1934</i>
+					</div>
+				</div>
+				<div class="post">
+					<img src="i/beauty.jpeg" alt="" class="slider-image">
+					<div class="post-info">
+						<h4><a href="single.html">One Image 100 days and hundered takes</a></h4>
+						<i class="far fa-user">Robert Frost</i>
+						&nbsp;
+						<i class="far fa-calender">Mar 8,1934</i>
+					</div>
+				</div>
+				<div class="post">
+					<img src="i/beauty.jpeg" alt="" class="slider-image">
+					<div class="post-info">
+						<h4><a href="single.html">One Image 100 days and hundered takes</a></h4>
+						<i class="far fa-user">Robert Frost</i>
+						&nbsp;
+						<i class="far fa-calender">Mar 8,1934</i>
+					</div>
+				</div>
+				<div class="post">
+					<img src="i/beauty.jpeg" alt="" class="slider-image">
+					<div class="post-info">
+						<h4><a href="single.html">One Image 100 days and hundered takes</a></h4>
+						<i class="far fa-user">Robert Frost</i>
+						&nbsp;
+						<i class="far fa-calender">Mar 8,1934</i>
+					</div>
+				</div>
+				<div class="post">
+					<img src="i/beauty.jpeg" alt="" class="slider-image">
+					<div class="post-info">
+						<h4><a href="single.html">One Image 100 days and hundered takes</a></h4>
+						<i class="far fa-user">Robert Frost</i>
+						&nbsp;
+						<i class="far fa-calender">Mar 8,1934</i>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		
+	
+	<!-- Post Article Vid 4 -->
+	<!-- Content -->
+	<div class="content clearfix">
+		
+	<div class="main-content">
+		<h1 class="recent-post-title">Recent Posts</h1>
+		
+		<div class="post">
+			<img src="i/lightning.jpeg" alt="" class="post-image">
+			<div class="post-preview">
+				<h2><a href="uRsingle.html">The strongest amd processor to ever exist is existing now!</a></h2>
+				<i class="far fa-user">Awa Melovena</i>
+				&nbsp;
+				<i class="far calender">Mar 29,2028</i>
+				<p class="preview-text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quam consequuntur reiciendis t aperiam nostrum ipsum cum voluptatem, qui nesciunt.
+				</p>
+				<a href="single.html" class="btn read-more">Read More</a>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="sidebar"></div>
+	</div>
+	
+	<!--// Post Article -->
+	</div>
+	
+	
+	
+<!----------------------------------->
+	<!-- jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- slick js -->
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		
+		$('.post-wrapper').slick({
+			slidesToShow:3,
+			slidesToScroll:1,
+			autoplay:true,
+			autoplaySpeed:2000,
+			nextArrow:$('.next'),
+			prevArrow:$('.prev'),
+			responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+			
+		});
+	});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
