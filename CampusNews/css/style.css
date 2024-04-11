@@ -32,6 +32,7 @@ a{
 .clearfix::after{
     content: '';
     display: block;
+    clear:both;
 }
 
 
@@ -97,7 +98,8 @@ header ul li{
     z-index: 1;
 }
 header ul li ul{
-    position: absolute;
+    position: static;
+    display: block;
     right: 0px;
     width: 180px;
     top: 66px;
@@ -136,7 +138,8 @@ header ul li a{
 header ul li a:hover{
     color: white;
     background: #2db2ff;
-    transition: 0.5s;
+    transition: 0.12s;
+    box-shadow: 0 2px 4px 0 #2db2ff, 0 2px 1px 0 #2db2ff;
 }
 header .fa-solid{
     display: none;
@@ -198,7 +201,7 @@ body .backvideo{
 
 .post-slider .next{
     position: absolute;
-    top: 50%;
+    top: 15%;
     right: 30px;
     font-size: 2em;
     color: #38b6ff;
@@ -206,7 +209,7 @@ body .backvideo{
 }
 .post-slider .prev{
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 30px;
     font-size: 2em;
     color: #38b6ff;
@@ -259,6 +262,18 @@ body .backvideo{
     float: left;
 }
 
+.content  .main-content.single {
+    background: white;
+    padding: 5px 50px;
+    font-size:1.1em;
+    border-radius: 10px;
+    color: #38b6ff;
+}
+.content  .main-content.single .post-title {
+    text-align: center;
+    margin-bottom: 40px;
+
+}
 .content .main-content .post{
     width: 95%;
     height: 270px;
@@ -388,6 +403,10 @@ body .backvideo{
     .showing{
         max-height: 100em;
     }
+    .showing ul {
+        transition: .75s;
+        max-height: 100em;
+    }
     header ul li{
         width: 100%;
     }
@@ -420,13 +439,29 @@ body .backvideo{
         right: 20px;
         top: 20px;
         font-size: 1.9em;
+        color: white;
+        z-index: 1;
     }
     header .logo{
         margin-left: 0.5em;
     }
 }
 
+@media (min-aspect-ratio: 16/9){
+    .backvedio{
+        width: 100%;
+        height: auto;
+        z-index: -1;
 
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .backvedio{
+        width: 100%;
+        height: 100%;
+
+    }
+}
 
 
 
@@ -438,7 +473,7 @@ body .backvideo{
 /* footer ----------------------------------------------------------------------------------------*/
 .footer{
     background:#38b6ff;
-    margin-top: 2080px;
+    margin-top: 1100px;
     color:#ffffff;
     height: 400px ;
     position: relative ;
