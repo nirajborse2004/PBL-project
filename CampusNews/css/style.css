@@ -507,12 +507,12 @@ body .backvideo{
 }
 
 .footer .footer-content .contact-form .contact-input:focus {
-    background: #1a1a1a;
+    background: #e0e0e0;
 }
 
 
 .footer .footer-content .contact-form .contact-btn {
-    border: 1px solid white;
+    border: 1px solid rgb(255, 255, 255);
     float: right;
 }
 
