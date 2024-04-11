@@ -201,7 +201,7 @@ body .backvideo{
 
 .post-slider .next{
     position: absolute;
-    top: 15%;
+    top: 10%;
     right: 30px;
     font-size: 2em;
     color: #38b6ff;
@@ -209,7 +209,7 @@ body .backvideo{
 }
 .post-slider .prev{
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 30px;
     font-size: 2em;
     color: #38b6ff;
@@ -375,12 +375,18 @@ body .backvideo{
     .content .sidebar .section.search{
         margin-top: 30px;
     }
-    .footer{
-        height: auto ;
+    .footer {
+        height: auto;
     }
     .footer .footer-content {
-        height: auto ;
+        height: auto;
         flex-direction: column;
+    }
+    .footer .footer-content .contact-form{
+        padding-bottom: 90px;
+    }
+    .footer .footer-content .contact-form .contact-btn {
+        width: 100%;
     }
 }
 
@@ -445,8 +451,43 @@ body .backvideo{
     header .logo{
         margin-left: 0.5em;
     }
+    .post-slider .next{
+        right: 10px;
+    }
+    .post-slider .prev{
+        left: 10px;
+    }
 }
+@media only screen and (max-width: 775px){
+    .content .main-content .post .post-image{
+        width: 100%;
+    }
 
+    .content .main-content .post .post-preview{
+        width: 100%;
+    }
+
+    .content .main-content .post{
+        height: auto;
+    }
+    .content .main-content .post .read-more{
+        position: static;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .post-slider .next{
+        right: 10px;
+    }
+    .post-slider .prev{
+        left: 10px;
+    }
+
+
+
+
+
+}
 @media (min-aspect-ratio: 16/9){
     .backvedio{
         width: 100%;
