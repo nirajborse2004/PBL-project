@@ -65,7 +65,10 @@
                 <li>
                     <a href="#">
                         <i id="hi" class="fa fa-user"></i>
-                        Mrinalini
+                        <?php
+                        include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\php\login.php';
+                        echo $unfpg ;
+                        ?>
                         <i id="hi" class="fa fa-chevron-down"></i>
                     </a>
                     <ul>
@@ -300,3 +303,5 @@
 
 </body>
 </html>
+
+
