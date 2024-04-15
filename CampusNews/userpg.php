@@ -200,6 +200,38 @@
                             </div>
                         </div>
 
+                        <div class="post">
+                            <?php
+                            include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
+
+                            ?>
+                            <img src="display_image.php?image_id" alt="Image">
+                            <!-- <img src="display_image.php?image_id=1" alt="Image"> -->
+                            <div class="post-preview">
+                                <h2><a href="single.html">
+                                <?php
+                                include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
+                                echo $title;
+                                ?>
+                                </a></h2>
+                                <i class="far fa-user">Bruce Lee</i>
+                                &nbsp;
+                                <i class="fa calender">
+                                <?php
+                                include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
+                                echo $date;
+                                ?>
+                                </i>
+                                <p class="preview-text">
+                                <?php
+                                include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
+                                echo $body;
+                                ?>
+                                </p>
+                                <a href="single.php" class="btn read-more">Read More</a>
+                            </div>
+                        </div>
+
                     </div>
                     <!-- /Main Content -->
                     <div class="sidebar">

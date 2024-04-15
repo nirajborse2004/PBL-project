@@ -42,23 +42,21 @@
 
     <div class="content ">
         <div class="main-content single">
-            <h1 class="podt-title">This is where the title of the post should be written</h1>
+            <h1 class="post-title">
+                <?php
+                include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
+                echo $title;
+                ?>
+            </h1>
             <div class="post-content">
-                <p> Abusive language, often referred to as swearing, cursing, or profanity, is a linguistic phenomenon deeply ingrained in human communication. It encompasses words or phrases that are considered offensive, vulgar, or disrespectful, often used to express anger, frustration, or contempt. While some may view it as harmless or even cathartic, abusive language carries significant consequences, both on an individual and societal level. This essay aims to explore the nature of abusive language, its psychological and social implications, and potential strategies for addressing its prevalence.</p>
-                <p>The Nature of Abusive Language:
-                    Abusive language manifests in various forms, ranging from mild expletives to derogatory slurs targeting specific individuals or groups. It transcends linguistic barriers and is prevalent across cultures and languages. Its potency lies in its ability to evoke strong emotional responses, whether it's shock, offense, or intimidation. The choice of words often reflects societal norms, cultural influences, and personal experiences, shaping the perception and impact of abusive language.</p>
-                <p>Psychological Impact:
-                    The psychological effects of abusive language are profound, affecting both the speaker and the recipient. For the speaker, swearing may provide temporary relief from stress or frustration, serving as a coping mechanism in challenging situations. However, habitual use of abusive language can reinforce negative thought patterns and contribute to increased aggression and hostility.</p>
-                <p>writting paragraphs is tough.</p>
-                <p>On the receiving end, exposure to abusive language can lead to feelings of humiliation, powerlessness, and diminished self-esteem. It can also trigger stress responses and exacerbate mental health conditions such as anxiety and depression. In cases of sustained verbal abuse, individuals may internalize derogatory language, perpetuating a cycle of self-destructive behavior and negative self-perception.
-                    Social Implications:
-                    Beyond its individual effects, abusive language has broader social implications. It undermines respectful discourse and erodes civility in interpersonal interactions. When used in public spaces or online platforms, it can create toxic environments that deter constructive dialogue and foster polarization. Moreover, abusive language perpetuates stereotypes and reinforces social hierarchies, marginalizing certain groups based on race, gender, sexuality, or other identities.</p>
-                <P>If your friend uses vulgar language, it's important to communicate your feelings about it to them in a respectful and understanding manner. You can let them know that you find their use of vulgar language uncomfortable or offensive, and explain why it bothers you. Encourage them to express themselves in a more respectful and considerate way. It's also important to set boundaries for yourself and let them know what language you are not comfortable with them using around you. Open and honest communication is key in addressing issues like this with friends.</P>
-                <p>Once upon a time, in the heart of a dense forest, lived an industrious ant named Andy and a gentle giant elephant named Ellie. Andy was known far and wide for his diligent work ethic, always scurrying around collecting food for the colony. Ellie, on the other hand, was admired for her wisdom and kindness towards all creatures in the forest.</p>
+                <p>
+                <?php
+                include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
+                echo $main_body;
+                ?>
+                </p>
             </div>
         </div>
-
-
 
 
         <div class="sidebar single">

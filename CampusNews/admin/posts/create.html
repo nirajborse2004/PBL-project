@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -71,34 +72,26 @@
                     <a href="create.html" class="btn btn-big">Add Posts</a>
                     <a href="index.html" class="btn btn-big">Manage Posts</a>
                 </div>
-
                 <div class="content">
                     <h2 class="page-title">Manage Posts</h2>
-                    <form action="create.html" method="post">
+                    <form action="/CampusNews/admin/posts/post.php" method="post" enctype="multipart/form-data">
                         <div>
                             <h3><label>Title</label></h3>
                             <input type="text" name="title" class="text-input">
                         </div>
                         <div>
                             <h3><label>Body</label></h3>
-                            <div id="editor"></div>
+                            <input type="text" name="body" class="text-input">
                         </div>
                         <div>
-                            <label>Image</label>
+                            <h3><label>Main Body</label></h3>
+                            <input type="text" name="main_body" class="text-input">
+                        </div>
+                        <div>
+                            <h3>Upload Image</h3>
                             <input type="file" name="image" class="text-input">
                         </div>
-                        <div>
-                            <h3><label>Topic</label></h3>
-                            <select name="topic" class="text-input">
-                                <option value="College News">College News</option>
-                                <option value="College Events">College Events</option>
-                                <option value="College Clubs">College Clubs</option>
-                                <option value="College Exams">College Exams</option>
-                            </select>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-big"><a href="/CampusNews/index.html">Add Post</a></button>
-                        </div>
+                        <input type="submit" name="submit" value="Add Post" class="btn btn-big">
                     </form>
                 </div>
             </div>
