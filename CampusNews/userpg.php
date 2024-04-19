@@ -66,13 +66,13 @@
                     <a href="#">
                         <i id="hi" class="fa fa-user"></i>
                         <?php
-                        include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\php\login.php';
+                        include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\php\registernew.php';
                         echo $unfpg ;
                         ?>
                         <i id="hi" class="fa fa-chevron-down"></i>
                     </a>
                     <ul>
-                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="/CampusNews/dashboard/index.php">Dashboard</a></li>
                         <li><a href="#" class="logout">LOGOUT</a></li>
                     </ul>
                 </li>
@@ -152,53 +152,11 @@
                     <div class="main-content">
                         <h1 class="recent-post-title">Recent Posts</h1>
 
-                        <div class="post">
-                            <img src="/CampusNews/images/trendingnews (6).jpg" alt="post" class="post-image">
-                            <div class="post-preview">
-                                <h2><a href="single.html">To hell with circumstances, I create opportunities. </a></h2>
-                                <i class="far fa-user">Bruce Lee</i>
-                                &nbsp;
-                                <i class="fa calender">March 26, 2024</i>
-                                <p class="preview-text">Bruce Lee was a Hong Kong-American martial artist and actor. He was the founder of Jeet Kune Do, a hybrid martial arts philosophy drawing from different combat disciplines that is sometimes credited with paving the way for modern mixed martial arts. </p>
-                                <a href="single.html" class="btn read-more">Read More</a>
-                            </div>
-                        </div>
 
-                        <div class="post">
-                            <img src="/CampusNews/images/trendingnews (1).jpg" alt="post" class="post-image">
-                            <div class="post-preview">
-                                <h2><a href="single.html">To hell with circumstances, I create opportunities. </a></h2>
-                                <i class="far fa-user">Bruce Lee</i>
-                                &nbsp;
-                                <i class="fa calender">March 26, 2024</i>
-                                <p class="preview-text">Bruce Lee was a Hong Kong-American martial artist and actor. He was the founder of Jeet Kune Do, a hybrid martial arts philosophy drawing from different combat disciplines that is sometimes credited with paving the way for modern mixed martial arts. </p>
-                                <a href="single.html" class="btn read-more">Read More</a>
-                            </div>
-                        </div>
 
-                        <div class="post">
-                            <img src="/CampusNews/images/trendingnews (2).jpg" alt="post" class="post-image">
-                            <div class="post-preview">
-                                <h2><a href="single.html">To hell with circumstances, I create opportunities. </a></h2>
-                                <i class="far fa-user">Bruce Lee</i>
-                                &nbsp;
-                                <i class="fa calender">March 26, 2024</i>
-                                <p class="preview-text">Bruce Lee was a Hong Kong-American martial artist and actor. He was the founder of Jeet Kune Do, a hybrid martial arts philosophy drawing from different combat disciplines that is sometimes credited with paving the way for modern mixed martial arts. </p>
-                                <a href="single.html" class="btn read-more">Read More</a>
-                            </div>
-                        </div>
 
-                        <div class="post">
-                            <img src="/CampusNews/images/trendingnews (3).jpg" alt="post" class="post-image">
-                            <div class="post-preview">
-                                <h2><a href="single.html">To hell with circumstances, I create opportunities. </a></h2>
-                                <i class="far fa-user">Bruce Lee</i>
-                                &nbsp;
-                                <i class="fa calender">March 26, 2024</i>
-                                <p class="preview-text">Bruce Lee was a Hong Kong-American martial artist and actor. He was the founder of Jeet Kune Do, a hybrid martial arts philosophy drawing from different combat disciplines that is sometimes credited with paving the way for modern mixed martial arts. </p>
-                                <a href="single.html" class="btn read-more">Read More</a>
-                            </div>
-                        </div>
+
+
 
                         <div class="post">
                             <?php
