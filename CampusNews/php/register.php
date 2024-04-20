@@ -19,7 +19,7 @@
     $rs = mysqli_query($con, $sql);
     if($rs)
     {
-        header("Location: /CampusNews/userpg.php");
+        header("Location: /index.html");
         exit();
     }
     else {

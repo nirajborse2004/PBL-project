@@ -9,7 +9,7 @@
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  crossorigin="anonymous">
     <!--CUSTOM STYLING-->
-    <link rel="stylesheet" href="/CampusNews/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- Custom script -->
-    <script src="/CampusNews/js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -59,20 +59,18 @@
             <ul class="sub">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
-                <li><a href="/CampusNews/services.html">SERVICES</a></li>
-                <!--<button><a href="#">SIGNUP</a></button>
-                <button><a href="#">LOGIN</a></button>-->
+                <li><a href="/header/services.html">SERVICES</a></li>
                 <li>
                     <a href="#">
                         <i id="hi" class="fa fa-user"></i>
                         <?php
-                        include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\php\registernew.php';
+                        include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\php\login.php';
                         echo $unfpg ;
                         ?>
                         <i id="hi" class="fa fa-chevron-down"></i>
                     </a>
                     <ul>
-                        <li><a href="/CampusNews/dashboard/index.php">Dashboard</a></li>
+                        <li><a href="/dashboard/index.php">Dashboard</a></li>
                         <li><a href="#" class="logout">LOGOUT</a></li>
                     </ul>
                 </li>
@@ -95,7 +93,7 @@
                 <div class="post-wrapper">
 
                     <div class="post">
-                        <img src="/CampusNews/images/trendingnew(10).jpeg" alt="" class="slider-image">
+                        <img src="/images/trendingnew(10).jpeg" alt="" class="slider-image">
                         <div class="post-info">
                             <h4><a href="single.html">Design is not just what it looks like and feels like. Design is how it works. -Steve Jobs</a></h4>
                             <i class="fas fa-user">Mrinalini</i>
@@ -105,7 +103,7 @@
                     </div>
 
                     <div class="post">
-                        <img src="/CampusNews/images/trendingnews (1).jpg" alt="" class="slider-image">
+                        <img src="/images/trendingnews (1).jpg" alt="" class="slider-image">
                         <div class="post-info">
                             <h4><a href="single.html">Design is not just what it looks like and feels like. Design is how it works. -Steve Jobs</a></h4>
                             <i class="fas fa-user">Mrinalini</i>
@@ -115,7 +113,7 @@
                     </div>
 
                     <div class="post">
-                        <img src="/CampusNews/images/trendingnews (2).jpg" alt="" class="slider-image">
+                        <img src="/images/trendingnews (2).jpg" alt="" class="slider-image">
                         <div class="post-info">
                             <h4><a href="single.html">Design is not just what it looks like and feels like. Design is how it works. -Steve Jobs</a></h4>
                             <i class="fas fa-user">Mrinalini</i>
@@ -125,7 +123,7 @@
                     </div>
 
                     <div class="post">
-                        <img src="/CampusNews/images/trendingnews (3).jpg" alt="" class="slider-image">
+                        <img src="/images/trendingnews (3).jpg" alt="" class="slider-image">
                         <div class="post-info">
                             <h4><a href="single.html">Design is not just what it looks like and feels like. Design is how it works. -Steve Jobs</a></h4>
                             <i class="fas fa-user">Mrinalini</i>
@@ -135,7 +133,7 @@
                     </div>
 
                     <div class="post">
-                        <img src="/CampusNews/images/trendingnews (4).jpg" alt="" class="slider-image">
+                        <img src="/images/trendingnews (4).jpg" alt="" class="slider-image">
                         <div class="post-info">
                             <h4><a href="single.html">Design is not just what it looks like and feels like. Design is how it works. -Steve Jobs</a></h4>
                             <i class="fas fa-user">Mrinalini</i>
@@ -151,42 +149,55 @@
                     <!-- Main Content -->
                     <div class="main-content">
                         <h1 class="recent-post-title">Recent Posts</h1>
+                        <?php
+                        // Database connection parameters
+                        $servername = "localhost";
+                        $username = "ranjitcj";
+                        $password = "ranjitcj15";
+                        $dbname = "campusnews";
 
+                        // Create connection
+                        $conn = new mysqli($servername, $username, $password, $dbname);
 
+                        // Check connection
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
 
+                        // Fetch data from the database
+                        $sql = "SELECT * FROM posts order by created_at desc";
+                        $result = $conn->query($sql);
 
+                        // Check if there are any records
+                        if ($result->num_rows > 0) {
+                            // Output data of each row
+                            while($row = $result->fetch_assoc()) {
+                                echo "<div class='post clearfix'>";
+                                echo "  <img class='post-image' src='/admin/posts/uploads/" . $row["image"] . "' alt='" . $row["title"] ." '>  ";
+                                echo "<div class='post-preview'>";
+                                echo "<h2>" . $row["title"] . "</h2>";
+                                echo "<p class='preview-text'>" . $row["body"] . "</p>";
+                                echo "<p class='fa calender'>" . $row["created_at"] . "</p>";
+                                // echo "<img src='uploads/" . $row["image"] . "' alt='" . $row["title"] .    "'>";
+                                echo "<a href='single.html' class='btn read-more'>Read More</a> ";
+                                echo "</div>";
+                                echo "</div>";
+                            }
+                        } else {
+                            echo "0 results";
+                        }
 
-
-
-                        <div class="post">
-                            <?php
-                            include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
-
-                            ?>
-                            <img src="display_image.php?image_id" alt="Image">
-                            <!-- <img src="display_image.php?image_id=1" alt="Image"> -->
+                        // Close connection
+                        $conn->close();
+                        ?>
+                        <div class="post clearfix">
+                            <img src="/images/trendingnews (6).jpg" alt="post" class="post-image">
                             <div class="post-preview">
-                                <h2><a href="single.html">
-                                <?php
-                                include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
-                                echo $title;
-                                ?>
-                                </a></h2>
-                                <i class="far fa-user">Bruce Lee</i>
+                                <h2><a href="single.html">To  </a></h2>
                                 &nbsp;
-                                <i class="fa calender">
-                                <?php
-                                include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
-                                echo $date;
-                                ?>
-                                </i>
-                                <p class="preview-text">
-                                <?php
-                                include 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\displaypost.php';
-                                echo $body;
-                                ?>
-                                </p>
-                                <a href="single.php" class="btn read-more">Read More</a>
+                                <i class="fa calender">March 26, 2024</i>
+                                <p class="preview-text">Bruce Lee was a Hong Kong-American martial artist and actor. He was the founder of Jeet Kune Do, a hybrid martial arts philosophy drawing from different combat disciplines that is sometimes credited with paving the way for modern mixed martial arts. </p>
+                                <a href="single.html" class="btn read-more">Read More</a>
                             </div>
                         </div>
 

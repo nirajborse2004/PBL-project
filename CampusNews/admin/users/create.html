@@ -9,9 +9,9 @@
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  crossorigin="anonymous">
     <!--CUSTOM STYLING-->
-    <link rel="stylesheet" href="/CampusNews/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- admin style -->
-    <link rel="stylesheet" href="/CampusNews/css/admin.css">
+    <link rel="stylesheet" href="/css/admin.css">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -38,16 +38,6 @@
         <header>
             <i class="fa-solid fa-bars menue-toggle"></i>
             <ul class="sub">
-                <li>
-                    <a href="#">
-                        <i class="fa fa-user"></i>
-                        Mrinalini
-                        <i class="fa fa-chevron-down" style=""></i>
-                    </a>
-                    <ul>
-                        <li><a href="#" class="logout">LOGOUT</a></li>
-                    </ul>
-                </li>
             </ul>
         </header>
     </nav>
@@ -60,9 +50,9 @@
             <!--left sidebar  -->
             <div class="left-sidebar">
                 <ul>
-                    <li><a href="/CampusNews/admin/posts/index.html">Manage Posts</a></li>
-                    <li><a href="index.html">Manage Users</a></li>
-                    <li><a href="/CampusNews/admin/topics/index.html">Manage Topics</a></li>
+                    <li><a href="/admin/posts/index.php">Manage Posts</a></li>
+                    <li><a href="index.php">Manage Users</a></li>
+                    <li><a href="/admin/topics/index.html">Manage Topics</a></li>
                 </ul>
             </div>
             <!--/left sidebar  -->
@@ -71,7 +61,7 @@
             <div class="admin-content">
                 <div class="button-group">
                     <a href="create.html" class="btn btn-big">Add Users</a>
-                    <a href="index.html" class="btn btn-big">Manage Users</a>
+                    <a href="index.php" class="btn btn-big">Manage Users</a>
                 </div>
 
                 <div class="content">
@@ -90,16 +80,7 @@
                             <input type="password" placeholder="Confirm Password" required><i class="fa-solid fa-lock"></i>
                         </div>
                         <div>
-                            <h3><label>Role</label></h3>
-                            <select name="topic" class="text-input">
-                                <option value="Writer">Writer</option>
-                                <option value="Admin">Admin</option>
-                                <option value="Club Member">Club Member</option>
-                                <option value="Exam Deparment">Exam Deparment</option>
-                            </select>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-big"><a href="/CampusNews/index.html">Add User</a></button>
+                            <button type="submit" class="btn btn-big"><a href="/index.php">Add User</a></button>
                         </div>
                     </form>
                 </div>
@@ -111,10 +92,10 @@
         <!-- JQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-        <script src="/CampusNews/ckeditor/ckeditor5-build-classic/ckeditor.js"></script>
+        <script src="/ckeditor/ckeditor5-build-classic/ckeditor.js"></script>
 
         <!-- Custom script -->
-        <script src="/CampusNews/js/scripts.js"></script>
+        <script src="/js/scripts.js"></script>
 </body>
 </html>
 
