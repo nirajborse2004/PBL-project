@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Trend Dosa</title>
+	<title>Trend Cast</title>
 	<link rel="stylesheet" href="styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -14,11 +14,19 @@
 	<header>
 		<!-- LOGO -->
 		<div class="logo" onClick="document.body.classList.toggle('bt')">
-			<h1 class="txt1">Tren<span>DOSA</span></h1>
+			<h1 class="txt1">Trend<span>CAST</span></h1>
 		</div>
 		
-		<!-- Toggle Btn -->
+		<!-- Toggle Btn
 		<i class="fa fa-bars menu-toggle" onClick="document.getElementById('nav').classList.toggle('showing')"></i>
+		-->
+
+		<i class="menu-toggle" onClick="document.getElementById('nav').classList.toggle('showing');this.classList.toggle('change')">
+			  <div class="bar1"></div>
+			  <div class="bar2"></div>
+			  <div class="bar3"></div>
+		</i>
+		
 		
 		<!-- Link sections -->
 		<div class="nav" id="nav">
@@ -50,7 +58,7 @@
 
 <!-- Landing-Video -->
 <div class="video-img-pallet">
-	<h1 onMouseOver="document.getElementById('vid').pause();" onMouseOut="document.getElementById('vid').play();" class="big-logo">TrenDOSA</h1>
+	<h1 onMouseOver="document.getElementById('vid').pause();" onMouseOut="document.getElementById('vid').play();" class="big-logo">TrendCast</h1>
 	
 	<video id="vid"  autoplay loop muted plays-inline>
 		<source id="src" src="i/clg.mp4" src="D:\codeSVS\clg.mp4" type="video/mp4">
@@ -170,9 +178,9 @@
 
 			</div>
 			<div class="socials">
-				<a href="#"> <i class="fa-brands fa-instagram"></i> </a>
 				<a href="#"> <i class="fa-brands fa-youtube"></i> </a>
 				<a href="#">  <i class="fa-brands fa-twitter"></i> </a>
+				<a href="#"> <i class="fa-brands fa-instagram"></i> </a>
 			    <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
 			</div>
 		</div>
@@ -204,8 +212,10 @@
 		</div>
 	</div>
 	<div class="footer-bottom">
-		&copy; codingpoets.com | Designed by Trendcast
+		&copy; codingpoets.com | Designed by TrendCast
 	</div>
+	<!--
+	-->
 </div>
 <!----------------------------------->
 <!-- jquery -->
@@ -255,4 +265,4 @@
 	});
 	</script>
 </body>
-</html>
+	</html>
