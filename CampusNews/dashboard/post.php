@@ -1,60 +1,46 @@
 <?php
-// Database connection
-$servername = "localhost";
-$username = "ranjitcj";
-$password = "ranjitcj15";
-$dbname = "campusnews";
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Database connection parameters
+    $servername = "localhost";
+    $username = "ranjitcj";
+    $password = "ranjitcj15";
+    $dbname = "campusnews";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-if (isset($_POST['submit'])) {
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Prepare and bind parameters
     $title = $_POST['title'];
     $body = $_POST['body'];
     $main_body = $_POST['main_body'];
-    $file = $_FILES['image'];
+    $image = $_FILES['image']['name']; // Assuming you're storing image filenames in the database
 
-    // File details
-    $fileName = $_FILES['image']['name'];
-    $fileTmpName = $_FILES['image']['tmp_name'];
-    $fileSize = $_FILES['image']['size'];
-    $fileError = $_FILES['image']['error'];
-    $fileType = $_FILES['image']['type'];
+    // Insert data into the database
+    $sql = "INSERT INTO userpostreq (title, body, main_body, image) VALUES (?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssss", $title, $body, $main_body, $image);
 
-    // File extension
-    $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+    // Upload image file
+    $target_dir = "uploads/"; // Directory where you want to store uploaded images
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-    // Allowed file types
-    $allowed = array('jpg', 'jpeg', 'png', 'gif');
+    // Execute SQL statement
+    if ($stmt->execute() === TRUE) {
+        header("Location: index.php");
 
-    if (in_array($fileExt, $allowed)) {
-        if ($fileError === 0) {
-            if ($fileSize < 1000000) { // 1MB limit
-                $fileNameNew = uniqid('', true) . "." . $fileExt;
-                $fileDestination = 'uploads/' . $fileNameNew;
-                move_uploaded_file($fileTmpName, $fileDestination);
-                // Insert into database
-                $sql = "INSERT INTO userspost(title,body, main_body, image_name, image_path) VALUES ( '$title', '$body','$main_body','$fileName', '$fileDestination')";
-                if ($conn->query($sql) === TRUE) {
-                    header("Location: /CampusNews/userpg.php");
-                    exit();
-                } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                }
-            } else {
-                echo "File size is too large.";
-            }
-        } else {
-            echo "Error uploading your file.";
-        }
     } else {
-        echo "Invalid file type.";
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    if (!$conn)
-    {
-        die("Connection failed!" . mysqli_connect_error());
-    }
+
+    // Close connection
+    $stmt->close();
+    $conn->close();
 }
 ?>

@@ -60,6 +60,7 @@
                     <li><a href="index.php">Manage Posts</a></li>
                     <li><a href="/admin/users/index.php">Manage Users</a></li>
                     <li><a href="/admin/topics/index.html">Manage Topics</a></li>
+                    <li><a href="/admin/user_req/index.php">Manage User Request</a></li>
                 </ul>
             </div>
             <!--/left sidebar  -->

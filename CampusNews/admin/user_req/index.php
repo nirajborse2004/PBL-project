@@ -34,7 +34,7 @@
     referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap"rel="stylesheet">
 
-    <title>Post</title>
+    <title>Admin Section - Manage User Request</title>
 
 </head>
 <body>
@@ -57,17 +57,17 @@
             <!--left sidebar  -->
             <div class="left-sidebar">
                 <ul>
-
+                    <li><a href="index.php">Manage Posts</a></li>
+                    <li><a href="/admin/users/index.php">Manage Users</a></li>
+                    <li><a href="/admin/topics/index.html">Manage Topics</a></li>
+                    <li><a href="/admin/topics/">Manage User Request</a></li>
                 </ul>
             </div>
             <!--/left sidebar  -->
 
             <!-- admin content -->
             <div class="admin-content">
-                <div class="button-group">
-                    <a href="create.html" class="btn btn-big">Add Posts</a>
-                    <a href="index.php" class="btn btn-big">Manage Posts</a>
-                </div>
+
                 <?php
                 // Database connection parameters
                 $servername = "localhost";
@@ -90,7 +90,7 @@
                 // Check if there are any records
                 if ($result->num_rows > 0) {
                     echo "<div class='content'>";
-                    echo "<h2 class='page-title'>Your Posts</h2>";
+                    echo "<h2 class='page-title'>Manage User Request</h2>";
                     echo "<table>";
                     echo "<thead>";
                     echo "<th>Title</th>";
@@ -103,6 +103,7 @@
                         echo "<tr>";
                         echo "<td>" . $row["title"] . "</td>";
                         echo "<td>" . $row["created_at"] . "</td>";
+                        echo "<td><button type='submit' class='btn btn-big'><a href='post.php'>Approve</a></button></td>";
                         echo "</tr>";
                     }
                     echo "</tbody>";

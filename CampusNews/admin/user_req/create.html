@@ -10,9 +10,9 @@
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  crossorigin="anonymous">
     <!--CUSTOM STYLING-->
-    <link rel="stylesheet" href="/CampusNews/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- admin style -->
-    <link rel="stylesheet" href="/CampusNews/css/admin.css">
+    <link rel="stylesheet" href="/css/admin.css">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -38,6 +38,17 @@
     <nav class = "navbar">
         <header>
             <i class="fa-solid fa-bars menue-toggle"></i>
+            <ul class="sub">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-user"></i>
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <ul>
+                        <li><a href="#" class="logout">LOGOUT</a></li>
+                    </ul>
+                </li>
+            </ul>
         </header>
     </nav>
 
@@ -46,12 +57,11 @@
         <div class="admin-wrapper">
             <!--left sidebar  -->
             <div class="left-sidebar">
-                <div class="profile">
-                    <?php
-                    include_once 'C:\Users\Lenovo\OneDrive\Desktop\PBL-project\CampusNews\php\registernew.php';
-                    echo $unfpg ;
-                    ?>
-                </div>
+                <ul>
+                    <li><a href="index.php">Manage Posts</a></li>
+                    <li><a href="/admin/users/index.php">Manage Users</a></li>
+                    <li><a href="/admin/topics/index.html">Manage Topics</a></li>
+                </ul>
             </div>
             <!--/left sidebar  -->
 
@@ -59,11 +69,11 @@
             <div class="admin-content">
                 <div class="button-group">
                     <a href="create.html" class="btn btn-big">Add Posts</a>
-                    <a href="index.html" class="btn btn-big">Manage Posts</a>
+                    <a href="index.php" class="btn btn-big">Manage Posts</a>
                 </div>
                 <div class="content">
                     <h2 class="page-title">Manage Posts</h2>
-                    <form action="/CampusNews/admin/posts/post.php" method="post" enctype="multipart/form-data">
+                    <form action="/admin/posts/post.php" method="post" enctype="multipart/form-data">
                         <div>
                             <h3><label>Title</label></h3>
                             <input type="text" name="title" class="text-input">
@@ -91,10 +101,10 @@
         <!-- JQuery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-        <script src="/CampusNews/ckeditor/ckeditor5-build-classic/ckeditor.js"></script>
+        <script src="/ckeditor/ckeditor5-build-classic/ckeditor.js"></script>
 
         <!-- Custom script -->
-        <script src="/CampusNews/js/scripts.js"></script>
+        <script src="/js/scripts.js"></script>
 </body>
 </html>
 
