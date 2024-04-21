@@ -19,20 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];
     $body = $_POST['body'];
     $main_body = $_POST['main_body'];
-    $image = $_FILES['image']['name']; // Assuming you're storing image filenames in the database
+    $image = $_FILES['image']['tmp_name'];
+    $image_name = $_FILES['image']['name'];
 
-    // Insert data into the database
-    $sql = "INSERT INTO userpostreq (title, body, main_body, image) VALUES (?, ?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss", $title, $body, $main_body, $image);
+    $img_data = addslashes(file_get_contents($image));
+    $sql = "INSERT INTO posts (title, body, main_body, image_name, image_data) VALUES ('$title','$body','$main_body','$image_name', '$img_data')";
 
-    // Upload image file
-    $target_dir = "uploads/"; // Directory where you want to store uploaded images
-    $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-
-    // Execute SQL statement
-    if ($stmt->execute() === TRUE) {
+    if ($conn->query($sql) === TRUE) {
         header("Location: index.php");
 
     } else {

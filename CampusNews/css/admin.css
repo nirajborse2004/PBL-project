@@ -1,5 +1,5 @@
 header{
-    background: #016dac;
+    background: #006669;
 }
 header *{
     color: white;
@@ -24,7 +24,7 @@ h1 .logo-text{
 .admin-wrapper .left-sidebar{
     flex: 2;
     height: 100%;
-    background: #2492d1;
+    background: #006669;
 }
 
 .admin-wrapper .left-sidebar ul{
@@ -37,10 +37,10 @@ h1 .logo-text{
 .admin-wrapper .left-sidebar ul li a{
     padding: 20px;
     display: block;
-    border-bottom: 1px solid #016dac;
+    border-bottom: 1px solid white;
 }
 .admin-wrapper .left-sidebar ul li a:hover{
-    background: #38b6ff;
+    background: #005254;
 }
 .admin-wrapper .admin-content{
     flex: 8;
@@ -52,7 +52,7 @@ h1 .logo-text{
 .admin-content .page-title{
     text-align: center;
     font-size: 35px;
-    text-shadow: 3.5px 4px 5px #91ccee;
+    text-shadow: 0.5px 1.5px 1px #006669;
     margin-bottom: 1.5rem;
 }
 
@@ -66,18 +66,18 @@ table{
 th, td{
     padding: 15px;
     text-align: left;
-    color: #38b6ff;
-    border-bottom: 1.5px solid #91ccee;
+    color: #006669;
+    border-bottom: 1.5px solid #006669;
 }
 
 .edit{
-    color: #2492d1;
+    color: #006669;
 }
 .delete{
     color: red;
 }
 .publish{
-    color: #016dac;
+    color: #006669;
 }
 
 

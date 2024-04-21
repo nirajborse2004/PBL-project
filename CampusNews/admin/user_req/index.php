@@ -39,15 +39,6 @@
 </head>
 <body>
 
-    <nav class = "navbar">
-        <header>
-            <i class="fa-solid fa-bars menue-toggle"></i>
-            <ul class="sub">
-            </ul>
-        </header>
-    </nav>
-
-    </div>
         <!-- Admin page wrapper-->
         <div class="admin-wrapper">
             <!--left sidebar  -->
@@ -80,7 +71,7 @@
                 }
 
                 // Fetch data from the database
-                $sql = "SELECT * FROM userpostreq order by created_at desc";
+                $sql = "SELECT * FROM posts order by created_at desc";
                 $result = $conn->query($sql);
 
                 // Check if there are any records
@@ -99,7 +90,7 @@
                         echo "<tr>";
                         echo "<td>" . $row["title"] . "</td>";
                         echo "<td>" . $row["created_at"] . "</td>";
-                        echo "<td><button type='submit' class='btn btn-big'><a href='post.php'>Approve</a></button></td>";
+                        echo "<td><button type='submit' class='btn btn-big'><a href=''>Approve</a></button></td>";
                         echo "</tr>";
                     }
                     echo "</tbody>";

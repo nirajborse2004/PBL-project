@@ -24,16 +24,16 @@ if ($result->num_rows > 0) {
     // Loop through each row
     while ($row = $result->fetch_assoc()) {
         // Extract data from the row
-        $id = $row['id'];
         $title = $row['title'];
         $body = $row['body'];
         $main_body = $row['main_body'];
-        $image = $row['image'];
+        $image_name = $row['image_name'];
+        $image_data = $row['image_data'];
         $created_at = $row['created_at'];
 
 
         // SQL query to insert data into posts table
-        $sql_insert = "INSERT INTO posts (id, title, body, main_body, image, created_at) VALUES ('0', '$title','$body','$main_body','$image','$created_at')";
+        $sql_insert = "INSERT INTO posts (id, title, body, main_body, image_name, image_data, created_at) VALUES ('0', '$title','$body','$main_body', '$image_name', '$image_data','$created_at')";
 
         // Execute the insert query
         if ($conn->query($sql_insert) === TRUE) {

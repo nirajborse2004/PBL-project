@@ -15,17 +15,14 @@ if ($conn->connect_error) {
 }
 
 // Retrieve image data from the database
-$sql = "SELECT image_name, image_data FROM images WHERE id = 5";
-$result = $conn->query($sql);
-
+$sqld = "SELECT image_name, image_data FROM images WHERE id = 5";
+$result = $conn->query($sqld);
 if ($result->num_rows > 0) {
     // Output data of each row
     while($row = $result->fetch_assoc()) {
         $image_name = $row['image_name'];
         $image_data = $row['image_data'];
-
         // Output the image
-
         echo "<img src='data:image/jpeg;base64," . base64_encode($image_data) . "' alt='" . $image_name . "'>";
     }
 } else {

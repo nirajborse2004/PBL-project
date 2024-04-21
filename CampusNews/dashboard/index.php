@@ -80,7 +80,7 @@
                 }
 
                 // Fetch data from the database
-                $sql = "SELECT * FROM userpostreq order by created_at desc";
+                $sql = "SELECT * FROM posts order by created_at desc";
                 $result = $conn->query($sql);
 
                 // Check if there are any records

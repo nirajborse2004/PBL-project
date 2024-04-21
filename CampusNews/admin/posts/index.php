@@ -38,13 +38,6 @@
 
 </head>
 <body>
-    <nav class = "navbar">
-        <header>
-            <i class="fa-solid fa-bars menue-toggle"></i>
-            <ul class="sub">
-            </ul>
-        </header>
-    </nav>
 
     </div>
         <!-- Admin page wrapper-->
