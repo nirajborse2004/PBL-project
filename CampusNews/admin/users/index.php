@@ -38,10 +38,6 @@
 
 </head>
 <body>
-    <div class="logo">
-        <!-- <h1 class="logo-text"><span>Trend</span>Cast</h1> -->
-        <a href="CampusNews/indexpg.php"><h1 class="logo-text"><span>Trend</span>Cast</h1></a>
-    </div>
 
     <nav class = "navbar">
         <header>
@@ -60,6 +56,7 @@
                     <li><a href="/admin/posts/index.php">Manage Posts</a></li>
                     <li><a href="index.php">Manage Users</a></li>
                     <li><a href="/admin/topics/index.html">Manage Topics</a></li>
+                    <li><a href="/admin/user_req/index.php">Manage User Request</a></li>
                 </ul>
             </div>
             <!--/left sidebar  -->
@@ -107,6 +104,7 @@
                         echo "<td>" . $row["username"] . "</td>";
                         echo "<td>" . $row["email"] . "</td>";
                         echo "<td>" . $row["joined_date"] . "</td>";
+                        echo "<td><button type='submit' class='btn btn-big'><a href='post.php'>Remove</a></button></td>";
                         echo "</tr>";
                     }
                     echo "</tbody>";

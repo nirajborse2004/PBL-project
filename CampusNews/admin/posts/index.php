@@ -38,11 +38,6 @@
 
 </head>
 <body>
-    <div class="logo">
-        <!-- <h1 class="logo-text"><span>Trend</span>Cast</h1> -->
-        <a href="CampusNews/indexpg.php"><h1 class="logo-text"><span>Trend</span>Cast</h1></a>
-    </div>
-
     <nav class = "navbar">
         <header>
             <i class="fa-solid fa-bars menue-toggle"></i>
@@ -97,7 +92,7 @@
                     echo "<table>";
                     echo "<thead>";
                     echo "<th>Title</th>";
-                    echo "<th>Author</th>";
+                    echo "<th>Post on</th>";
                     echo "<th colspan='3'>Action</th>";
                     echo "</thead>";
                     // Output data of each row
@@ -106,6 +101,8 @@
                         echo "<tr>";
                         echo "<td>" . $row["title"] . "</td>";
                         echo "<td>" . $row["created_at"] . "</td>";
+                        echo "<td><button type='submit' class='btn btn-big'><a href=''>Edit</a></button></td>";
+                        echo "<td><button type='submit' class='btn btn-big'><a href=''>Delete</a></button></td>";
                         echo "</tr>";
                     }
                     echo "</tbody>";

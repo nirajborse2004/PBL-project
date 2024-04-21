@@ -35,26 +35,12 @@
     <title>CampusNews</title>
 </head>
 <body>
-    <video id="vid" autoplay loop muted plays-inline class="backvideo">
-        <source src="" type="video/mp4">
-    </video>
-
-    <div class="newtext">
-        <div class="newcontainer">
-            <p class="newstatic-text">
-            College
-            </p>
-            <ul class="item-list">
-                <li class="item">LatestNews!</li>
-                <li class="item">Events!</li>
-                <li class="item">Activities!</li>
-                <li class="item">Clubs!</li>
-            </ul>
-        </div>
-    </div>
-
-    <nav class = "navbar">
-        <header>
+<header>
+        <div class="logo" onClick="document.body.classList.toggle('bt')">
+			<h1 class="txt1">Trent<span>Cast</span></h1>
+		</div>
+        <i class="fa fa-bars menu-toggle" onClick="document.getElementById('nav').classList.toggle('showing')"></i>
+        <nav class = "navbar">
             <i class="fa-solid fa-bars menue-toggle"></i>
             <ul class="sub">
                 <li><a href="#">HOME</a></li>
@@ -75,13 +61,21 @@
                     </ul>
                 </li>
             </ul>
-        </header>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- <div class="new">
-        <h1 onMouseOver="document.getElementById('vid').pause();" onMouseOut="document.getElementById('vid').play();">TrendCast</h1> -->
+    <div class="video-img-pallet">
+		<div class="video-img-tint">
+			<h1 onMouseOver="document.getElementById('vid').pause();" onMouseOut="document.getElementById('vid').play();" class="big-logo">TrentCast</h1>
+		</div>
+		<video id="vid"  autoplay loop muted plays-inline>
+        	<source id="src" src="/videos/clg.mp4" type="video/mp4">
+  		</video>
+		<!--
+		-->
+	</div>
 
-    </div>
+
         <!-- page wrapper-->
         <div class="page-wrapper">
 
@@ -173,7 +167,7 @@
                             // Output data of each row
                             while($row = $result->fetch_assoc()) {
                                 echo "<div class='post clearfix'>";
-                                echo "  <img class='post-image' src='/admin/posts/uploads/" . $row["image"] . "' alt='" . $row["title"] ." '>  ";
+                                echo "<img class='post-image' src='/admin/posts/uploads/" . $row["image"] . "' alt='" . $row["title"] ." '>";
                                 echo "<div class='post-preview'>";
                                 echo "<h2>" . $row["title"] . "</h2>";
                                 echo "<p class='preview-text'>" . $row["body"] . "</p>";
@@ -194,6 +188,26 @@
                             <img src="/images/trendingnews (6).jpg" alt="post" class="post-image">
                             <div class="post-preview">
                                 <h2><a href="single.html">To  </a></h2>
+                                &nbsp;
+                                <i class="fa calender">March 26, 2024</i>
+                                <p class="preview-text">Bruce Lee was a Hong Kong-American martial artist and actor. He was the founder of Jeet Kune Do, a hybrid martial arts philosophy drawing from different combat disciplines that is sometimes credited with paving the way for modern mixed martial arts. </p>
+                                <a href="single.html" class="btn read-more">Read More</a>
+                            </div>
+                        </div>
+                        <div class="post clearfix">
+                            <img src="/images/trendingnews (1).jpg" alt="post" class="post-image">
+                            <div class="post-preview">
+                                <h2><a href="single.html">To hell with circumstances, I create opportunities. </a></h2>
+                                &nbsp;
+                                <i class="fa calender">March 26, 2024</i>
+                                <p class="preview-text">Bruce Lee was a Hong Kong-American martial artist and actor. He was the founder of Jeet Kune Do, a hybrid martial arts philosophy drawing from different combat disciplines that is sometimes credited with paving the way for modern mixed martial arts. </p>
+                                <a href="single.html" class="btn read-more">Read More</a>
+                            </div>
+                        </div>
+                        <div class="post clearfix">
+                            <img src="/images/trendingnews (3).jpg" alt="post" class="post-image">
+                            <div class="post-preview">
+                                <h2><a href="single.html">To hell with circumstances, I create opportunities. </a></h2>
                                 &nbsp;
                                 <i class="fa calender">March 26, 2024</i>
                                 <p class="preview-text">Bruce Lee was a Hong Kong-American martial artist and actor. He was the founder of Jeet Kune Do, a hybrid martial arts philosophy drawing from different combat disciplines that is sometimes credited with paving the way for modern mixed martial arts. </p>

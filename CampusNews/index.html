@@ -35,26 +35,12 @@
     <title>CampusNews</title>
 </head>
 <body>
-    <video id="vid" autoplay loop muted plays-inline class="backvideo">
-        <source src="" type="video/mp4">
-    </video>
-
-    <div class="newtext">
-        <div class="newcontainer">
-            <p class="newstatic-text">
-            College
-            </p>
-            <ul class="item-list">
-                <li class="item">LatestNews!</li>
-                <li class="item">Events!</li>
-                <li class="item">Activities!</li>
-                <li class="item">Clubs!</li>
-            </ul>
-        </div>
-    </div>
-
-    <nav class = "navbar">
-        <header>
+    <header>
+        <div class="logo" onClick="document.body.classList.toggle('bt')">
+			<h1 class="txt1">Trent<span>Cast</span></h1>
+		</div>
+        <i class="fa fa-bars menu-toggle" onClick="document.getElementById('nav').classList.toggle('showing')"></i>
+        <nav class = "navbar">
             <i class="fa-solid fa-bars menue-toggle"></i>
             <ul class="sub">
                 <li><a href="#">HOME</a></li>
@@ -71,9 +57,19 @@
                     </ul>
                 </li>
             </ul>
-        </header>
-    </nav>
+        </nav>
+    </header>
 
+    <div class="video-img-pallet">
+		<div class="video-img-tint">
+			<h1 onMouseOver="document.getElementById('vid').pause();" onMouseOut="document.getElementById('vid').play();" class="big-logo">TrentCast</h1>
+		</div>
+		<video id="vid"  autoplay loop muted plays-inline>
+        	<source id="src" src="/videos/clg.mp4" type="video/mp4">
+  		</video>
+		<!--
+		-->
+	</div>
     <!-- <div class="new">
         <h1 onMouseOver="document.getElementById('vid').pause();" onMouseOut="document.getElementById('vid').play();">TrendCast</h1>
     </div> -->

@@ -38,10 +38,6 @@
 
 </head>
 <body>
-    <div class="logo">
-        <!-- <h1 class="logo-text"><span>Trend</span>Cast</h1> -->
-        <a href="CampusNews/indexpg.php"><h1 class="logo-text"><span>Trend</span>Cast</h1></a>
-    </div>
 
     <nav class = "navbar">
         <header>

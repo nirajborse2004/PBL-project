@@ -38,10 +38,6 @@
 
 </head>
 <body>
-    <div class="logo">
-        <!-- <h1 class="logo-text"><span>Trend</span>Cast</h1> -->
-        <a href="CampusNews/indexpg.php"><h1 class="logo-text"><span>Trend</span>Cast</h1></a>
-    </div>
 
     <nav class = "navbar">
         <header>
@@ -57,10 +53,10 @@
             <!--left sidebar  -->
             <div class="left-sidebar">
                 <ul>
-                    <li><a href="index.php">Manage Posts</a></li>
+                    <li><a href="/admin/posts/index.php">Manage Posts</a></li>
                     <li><a href="/admin/users/index.php">Manage Users</a></li>
                     <li><a href="/admin/topics/index.html">Manage Topics</a></li>
-                    <li><a href="/admin/topics/">Manage User Request</a></li>
+                    <li><a href="/admin/user_req/index.php">Manage User Request</a></li>
                 </ul>
             </div>
             <!--/left sidebar  -->
@@ -94,7 +90,7 @@
                     echo "<table>";
                     echo "<thead>";
                     echo "<th>Title</th>";
-                    echo "<th>Author</th>";
+                    echo "<th>Date</th>";
                     echo "<th colspan='3'>Action</th>";
                     echo "</thead>";
                     // Output data of each row

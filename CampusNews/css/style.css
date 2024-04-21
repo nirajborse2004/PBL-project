@@ -35,6 +35,57 @@ a{
     clear:both;
 }
 
+/*landing--->video landing section */
+.video-img-pallet {
+    /* height:100vh;
+    width:100vw; */
+
+    height:855px;
+    width:1515px;
+    /* border: 5px solid red; */
+}
+.video-img-tint{
+    /* width:100%;
+    height:100%; */
+
+    height:855px;
+    width:1515px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    background: rgba(0,0,0,0.108);
+    /* border: 5px solid green; */
+}
+.big-logo{
+    display: inline-block;
+    color:white;
+    font-size: 5rem;
+    font-family: "Candal",cursive;
+    transition: all .3s;
+    z-index: 5090;
+}
+.big-logo:hover{
+    color: rgba(255,255,255,0.1);
+    transform:scale(1.3);
+    -webkit-text-stroke: 4px #fff;
+    letter-spacing: .1rem;
+}
+
+#vid{
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* right: 0;
+    bottom: 0; */
+    height:852px;
+    width:1515px;
+    overflow: hidden;
+    /*
+    object-fit: cover;
+    */
+    z-index: -5;
+}
 
 
 .btn{
@@ -65,10 +116,11 @@ a{
 }
 
 /* Navbar------------------------------------------------------------------------------- */
-header{
-    background: transparent;
-    height: 66px;
-    z-index: 1;
+header {
+	width:100%;
+	position: fixed;
+	top:0;
+	z-index: 99999;
 }
 header *{
     color: #38b6ff;
@@ -191,7 +243,8 @@ body .backvideo{
 /* post -----------------------------------------------------------------------------------------------------------*/
 
 .post-slider{
-    top: 800px;
+    /* top: 800px; */
+    top: 0;
     position: relative;
 }
 .post-slider .slider-title{
@@ -199,17 +252,18 @@ body .backvideo{
     margin: 30px auto;
 }
 
-.post-slider .next{
+.page-wrapper .post-slider .next{
     position: absolute;
-    top: 10%;
+    /* top: 225px; */
+    top: 225px;
     right: 30px;
     font-size: 2em;
     color: #38b6ff;
     cursor: pointer;
 }
-.post-slider .prev{
+.page-wrapper .post-slider .prev{
     position: absolute;
-    top: 10%;
+    top: 225px;
     left: 30px;
     font-size: 2em;
     color: #38b6ff;
@@ -396,6 +450,77 @@ body .backvideo{
     }
 }
 
+@media only screen and (max-width:777px){
+    header ul{
+        width: 100%;
+        background: rgba(0,0,0,0.61);
+        /*
+        border:1px solid black;
+        */
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    /* Toggle class */
+    .showing ul {
+        transition: .75s;
+        border: 1px black solid;
+        max-height: 100em;
+    }
+
+    /* nav items themslefs */
+    header ul li{
+        width: 100%;
+    }
+
+    /* sub nav items */
+    header ul li ul{
+        position: static;
+        display: block;
+        width: 100%;
+        background: transparent;
+        border:0px ;
+    }
+
+    header ul li ul li a{
+        padding: 10px;
+        /*
+        color: black;
+        */
+        background: transparent;
+        padding-left: 50px;
+    }
+    header ul li ul li a:hover{
+        box-shadow: 0 4px 8px 0 rgba(250,235,215,0.22), 0 6px 20px 2px rgba(0, 0, 0, 0.19);
+    }
+    /* toggling menu */
+    header .menu-toggle {
+        display: block;
+        position:absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.9em;
+    }
+    header .logo{
+        margin-left: 0;
+    }
+
+
+    /* extra prop on navLinks svs*/
+    header ul li a:hover{
+    	/*
+        color: cadetblue;
+        border-radius: 5px;
+    	*/
+        background-color: rgba(0,0,0,0.755);
+        transform:translateX(5px);
+        border:0;
+        transition: 0.25s;
+        box-shadow: 0 4px 8px 0 rgba(250,235,215,0.22);
+    }
+}
+
+
 @media only screen and (max-width: 775px) {
     header{
         position: relative;
@@ -514,7 +639,7 @@ body .backvideo{
 /* footer ----------------------------------------------------------------------------------------*/
 .footer{
     background:#38b6ff;
-    margin-top: 1100px;
+    margin-top: 100px;
     color:#ffffff;
     height: 400px ;
     position: relative ;
