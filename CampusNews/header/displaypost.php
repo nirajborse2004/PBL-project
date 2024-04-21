@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Step 2: Execute SQL Query
-$sql = "SELECT * FROM userspost";
+$sql = "SELECT * FROM posts";
 $result = $conn->query($sql);
 
 // Step 3: Fetch Data
@@ -22,11 +22,12 @@ if ($result->num_rows > 0) {
     // Step 4: Display Data on Website
     while($row = $result->fetch_assoc()) {
         $id = $row['id'];
-        $date = $row['date'];
+        $image = $row['image'];
+        $date = $row['created_at'];
         $title = $row['title'];
         $body = $row['body'];
         $main_body = $row['main_body'];
-        echo "{$row['image_path']}";
+        // echo "{$row['image_path']}";
         // $image_name = $row['image_name'];
         // $image_path = $row['image_path'];
         // $image_ = readfile($image_path);

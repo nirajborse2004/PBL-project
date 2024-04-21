@@ -166,14 +166,19 @@
                         if ($result->num_rows > 0) {
                             // Output data of each row
                             while($row = $result->fetch_assoc()) {
+                                $id_img=$row['id'];
+                                $image_name = $row['image_name'];
+                                $image_data = $row['image_data'];
                                 echo "<div class='post clearfix'>";
-                                echo "<img class='post-image' src='/admin/posts/uploads/" . $row["image"] . "' alt='" . $row["title"] ." '>";
+                                // echo "<img class='post-image' src='/admin/posts/uploads/" . $row["image"] . "' alt='" . $row["title"] ." '>";
+                                echo "<img src='data:image/jpeg;base64," . base64_encode($image_data) . "' alt='" . $image_name . "'>";
+
                                 echo "<div class='post-preview'>";
                                 echo "<h2>" . $row["title"] . "</h2>";
                                 echo "<p class='preview-text'>" . $row["body"] . "</p>";
                                 echo "<p class='fa calender'>" . $row["created_at"] . "</p>";
                                 // echo "<img src='uploads/" . $row["image"] . "' alt='" . $row["title"] .    "'>";
-                                echo "<a href='single.html' class='btn read-more'>Read More</a> ";
+                                echo "<a href='/php/single.php' class='btn read-more'>Read More</a> ";
                                 echo "</div>";
                                 echo "</div>";
                             }

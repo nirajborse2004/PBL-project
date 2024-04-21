@@ -90,7 +90,7 @@
                     echo "<table>";
                     echo "<thead>";
                     echo "<th>Title</th>";
-                    echo "<th>Author</th>";
+                    echo "<th>Date</th>";
                     echo "<th colspan='3'>Action</th>";
                     echo "</thead>";
                     // Output data of each row
