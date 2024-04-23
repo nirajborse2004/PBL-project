@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+.popular {
+	display:none;
+}
 * {
 	box-sizing: border-box;
 	user-select: none;
@@ -8,7 +9,6 @@
     padding: 0px;
     margin: 0;
     */
-    scroll-behavior: smooth;
 }
 /* Debug style */
 .bt * {
@@ -78,6 +78,13 @@ header .logo {
     border: 1px black dotted;
     */
 }
+/*
+.txt1 {
+	background-image: url(i/logo.jpg);
+	background-repeat: no-repeat;
+	border-radius:5px;
+}
+*/
 header .txt1 {
 	margin: 9px;
 	margin-top: 10px;
@@ -247,15 +254,22 @@ h1.txt1 {
 	box-sizing: border-box;
 	display:none;
 	*/
+	/*
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	height: 100%;
 	width: auto;
 	overflow: hidden;
-	/*
 	object-fit: cover;
 	*/
+	position: absolute;
+    right: 0;
+
+    width: 100%;
+    margin-bottom: 200px;
+    justify-content: center;
+    box-sizing: border-box;
 	z-index: -5;
 }
 
@@ -432,10 +446,68 @@ header .menu-toggle {
 .content .main-content {
 	width: 70%;
 	float: left;
-	/*
-	border:1px solid blue;
-	*/
+	padding-top: 20px;
 }
+
+.content .main-content.single {
+    background: white;
+    padding: 5px 50px;
+    font-size:1.1em;
+    border-radius: 10px;
+	width: 70%;
+	float: left;
+	padding-top: 40px;
+}
+.content .main-content.single .post-image {
+    height: 500px;
+	width: 500px;
+}
+
+
+.content .sidebar .single{
+    width: 30%;
+    float: left;
+}
+
+.content .sidebar .single .section{
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content .sidebar .single .section-title{
+    margin: 10px 0px 10px 0px;
+}
+
+.content .sidebar .single .section.search{
+    margin-top: 80px;
+}
+.content .sidebar .single .section.topics ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-top: 1px solid #0066a1;
+}
+.content .sidebar .single .section.topics ul li a{
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #0066a1;
+    transition: all 0.3s;
+}
+
+.content .sidebar .single .section.topics ul li a:hover{
+    padding-left: 10px;
+    transition: all 0.3s;
+}
+
+
+
+.content  .main-content.single .post-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .content .main-content .recent-post-title {
 	margin: 20px 20px;
 	font-family: Candal;
@@ -892,4 +964,31 @@ header .menu-toggle {
 	padding: 10px;
 	float: none;
 }/**/
+#vid {
+
+	/*
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -5;
+	width: 100%;
+	margin-bottom: 200px;
+	justify-content: center;
+	box-sizing: border-box;
+	display:none;
+	*/
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: auto;
+	overflow: hidden;
+	margin-bottom: 0;
+justify-content: center;
+box-sizing: border-box;
+	/*
+	object-fit: cover;
+	*/
+	z-index: -5;
+}
 }

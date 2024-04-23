@@ -22,11 +22,13 @@ if ($result->num_rows > 0) {
     // Step 4: Display Data on Website
     while($row = $result->fetch_assoc()) {
         $id = $row['id'];
-        $image = $row['image'];
+        // $image = $row['image'];
         $date = $row['created_at'];
         $title = $row['title'];
         $body = $row['body'];
         $main_body = $row['main_body'];
+        $image_name = $row['image_name'];
+        $image_data = $row['image_data'];
         // echo "{$row['image_path']}";
         // $image_name = $row['image_name'];
         // $image_path = $row['image_path'];

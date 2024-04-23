@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Candal&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- JQuery
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
 
     <!-- slick carousel -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -39,8 +39,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Candal&amp;display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Candal&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -112,7 +112,7 @@
 			<div class="post-wrapper">
 
 				<div class="post">
-					<img src="/image_1.png" alt="" class="slider-image">
+					<img src="/images/trendingnews (1).jpg" alt="" class="slider-image">
 					<div class="post-info">
 						<h4><a href="/single.html">One Image 100 days and hundered takes</a></h4>
 						<i id="author" class="far fa-user"> Robert Frost</i>
@@ -121,7 +121,7 @@
 					</div>
 				</div>
 				<div class="post">
-					<img src="/image_1.png" alt="" class="slider-image">
+					<img src="/images/trendingnews (2).jpg" alt="" class="slider-image">
 					<div class="post-info">
 						<h4><a href="/single.html">One Image 100 days and hundered takes</a></h4>
 						<i class="far fa-user">Robert Frost</i>
@@ -130,7 +130,7 @@
 					</div>
 				</div>
 				<div class="post">
-					<img src="/image_1.png" alt="" class="slider-image">
+					<img src="/images/trendingnews (3).jpg" alt="" class="slider-image">
 					<div class="post-info">
 						<h4><a href="/single.html">One Image 100 days and hundered takes</a></h4>
 						<i class="far fa-user">Robert Frost</i>
@@ -139,7 +139,7 @@
 					</div>
 				</div>
 				<div class="post">
-					<img src="/image_1.png" alt="" class="slider-image">
+					<img src="/images/trendingnews (4).jpg" alt="" class="slider-image">
 					<div class="post-info">
 						<h4><a href="/single.html">One Image 100 days and hundered takes</a></h4>
 						<i class="far fa-user">Robert Frost</i>
@@ -148,7 +148,7 @@
 					</div>
 				</div>
 				<div class="post">
-					<img src="/image_1.png" alt="" class="slider-image">
+					<img src="/images/trendingnews (5).jpg" alt="" class="slider-image">
 					<div class="post-info">
 						<h4><a href="/single.html">One Image 100 days and hundered takes</a></h4>
 						<i class="far fa-user">Robert Frost</i>
@@ -160,7 +160,6 @@
 
 
 		</div>
-
 		<!-- Content -->
 		<div class="content clearfix">
 
@@ -196,7 +195,7 @@
                                 // echo "<img class='post-image' src='/admin/posts/uploads/" . $row["image"] . "' alt='" . $row["title"] ." '>";
                                 echo "<img class='post-image' src='data:image/jpeg;base64," . base64_encode($image_data) . "' alt='" . $image_name . "'>";
                                 echo "<div class='post-preview'>";
-                                echo "<h3>" . $row["title"] . "</h3>";
+                                echo "<h3><a href='/php/single.php'>" . $row["title"] . "</a></h3>";
                                 echo "&nbsp";
                                 echo "<span id='category'>Tech</span>";
                                 echo "<p class='preview-text'>" . $row["body"] . "</p>";
@@ -214,30 +213,43 @@
                         $conn->close();
                         ?>
 
-				<div class="post clearfix">
-					<img src="/images/lightning.jpeg" alt="" class="post-image">
+<div class="post clearfix">
+					<img src="/singlepost/image_2.png" alt="" class="post-image">
 					<div class="post-preview clearfix">
-						<h3><a href="/uRsingle.html">The strongest amd processor to ever exist is existing now!</a></h3>
-						<i class="far fa-user"><span id="author">Awa Melovena</span></i>
+						<h3><a href="/singlepost/post1.html">Science exhibitions have long been cherished as a platform where wonder meets education, where curiosity is sparked, and where innovation takes center stage.</a></h3>
+						<i class="far fa-user"><span id="author">Elon Musk</span></i>
 						&nbsp;
 						<span id="category">Tech</span>
 						<p class="preview-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quam consequuntur reiciendis t aperiam nostrum ipsum cum voluptatem, qui nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, obcaecati. At suscipit harum minima quo sed voluptatum delectus, repellat. Minus dolorem quo quia commodi perferendis nesciunt eaque consectetur atque maiores.
+							One of the most captivating aspects of a science exhibition is its hands-on approach to learning. Visitors are encouraged to touch, feel, and interact with the exhibits, fostering a deeper understanding of scientific concepts. From building simple machines to conducting fascinating experiments, there's no shortage of opportunities to engage both the mind and the senses.
 						</p>
-						<a href="/single.html" class="btn read-more">Read More</a>
+						<a href="/singlepost/post1.html" class="btn read-more">Read More</a>
 					</div>
 				</div>
 				<div class="post clearfix">
-					<img src="/images/lightning.jpeg" alt="" class="post-image">
+					<img src="/singlepost/doodle6.png" alt="" class="post-image">
 					<div class="post-preview clearfix">
-						<h3><a href="/uRsingle.html">The strongest amd processor to ever exist is existing now!</a></h3>
-						<i class="far fa-user"><span id="author">Awa Melovena</span></i>
+						<h3><a href="/singlepost/post2.html">Are you ready to unlock the world of endless possibilities through coding? Look no further! Our Coding Club offers an exciting opportunity for beginners and experienced coders alike to dive into the thrilling world of programming. </a></h3>
+						<i class="far fa-user"><span id="author">Elon Musk</span></i>
 						&nbsp;
 						<span id="category">Tech</span>
 						<p class="preview-text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quam consequuntur reiciendis t aperiam nostrum ipsum cum voluptatem, qui nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, obcaecati. At suscipit harum minima quo sed voluptatum delectus, repellat. Minus dolorem quo quia commodi perferendis nesciunt eaque consectetur atque maiores.
+							Whether you're a complete novice or a seasoned pro, we have something for everyone. Hands-On Projects: Get your hands dirty with real-world projects! From building websites to crafting mobile apps, you'll gain practical experience that sets you apart. Collaborative Environment: Connect with like-minded individuals who share your passion for coding. Collaborate on projects, exchange ideas, and build lasting friendships. Stay Ahead: In today's tech-driven world, coding skills are more valuable than ever. Gain the competitive edge you need to succeed in any field.
 						</p>
-						<a href="/single.html" class="btn read-more">Read More</a>
+						<a href="/singlepost/post2.html" class="btn read-more">Read More</a>
+					</div>
+				</div>
+				<div class="post clearfix">
+					<img src="/singlepost/image3main.jpg" alt="" class="post-image">
+					<div class="post-preview clearfix">
+						<h3><a href="/singlepost/post3.html">The lecture commenced with an overview of the hospitality industry, its evolution, and the pivotal role of hotel management within it. </a></h3>
+						<i class="far fa-user"><span id="author">Elon Musk</span></i>
+						&nbsp;
+						<span id="category">Tech</span>
+						<p class="preview-text">
+							Lecture on "Those misunderstood Parents" by Mr. Vasant Baburao Hankare. As I sat in the dimly lit auditorium, surrounded by eager listeners, I found myself drawn into a profound exploration of one of life's most fundamental yet often overlooked topics: the importance of parents.
+						</p>
+						<a href="/singlepost/post3.html" class="btn read-more">Read More</a>
 					</div>
 				</div>
 
@@ -323,10 +335,10 @@
 				<h2> Quick Links </h2>
 				<br>
 				<ul>
-					<a href=""> <li>Events</li> </a>
-					<a href=""> <li>Team</li> </a>
-					<a href=""> <li>Gallery</li> </a>
-					<a href=""> <li>Terms and Conditions</li> </a>
+					<a href="#"> <li>Events</li> </a>
+					<a href="#"> <li>Team</li> </a>
+					<a href="#"> <li>Gallery</li> </a>
+					<a href="#"> <li>Terms and Conditions</li> </a>
 				</ul>
 			</div>
 			<div class="footer-section contact-form">
