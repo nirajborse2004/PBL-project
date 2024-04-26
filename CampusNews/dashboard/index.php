@@ -40,8 +40,6 @@
 <body>
 
 
-
-    </div>
         <!-- Admin page wrapper-->
         <div class="admin-wrapper">
             <!--left sidebar  -->
@@ -55,7 +53,7 @@
             <!-- admin content -->
             <div class="admin-content">
                 <div class="button-group">
-                    <a href="create.html" class="btn btn-big">Add Posts</a>
+                    <a href="create.php" class="btn btn-big">Add Posts</a>
                     <a href="index.php" class="btn btn-big">Manage Posts</a>
                 </div>
                 <?php
@@ -64,7 +62,6 @@
                 $username = "ranjitcj";
                 $password = "ranjitcj15";
                 $dbname = "campusnews";
-
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -74,7 +71,7 @@
                 }
 
                 // Fetch data from the database
-                $sql = "SELECT * FROM posts order by created_at desc";
+                $sql = "SELECT * FROM userpostreq order by created_at desc";
                 $result = $conn->query($sql);
 
                 // Check if there are any records
@@ -98,7 +95,9 @@
                     echo "</tbody>";
                     echo "</table>";
                 } else {
-                    echo "0 results";
+                    echo "<div class='content'>";
+                    echo "<h3>No Posts Yet</h3>";
+                    echo "</div>";
                 }
                 // Close connection
                 $conn->close();

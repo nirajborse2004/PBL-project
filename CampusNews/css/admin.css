@@ -48,12 +48,32 @@ h1 .logo-text{
     padding: 40px 100px 100px;
     overflow-y: scroll;
 }
-
+.admin-wrapper .admin-content .page-title .input-data{
+    flex: 8;
+    row-gap: 5;
+    padding: 40px 100px 100px;
+    overflow-y: scroll;
+}
 .admin-content .page-title{
     text-align: center;
     font-size: 35px;
     text-shadow: 0.5px 1.5px 1px #006669;
     margin-bottom: 1.5rem;
+}
+.admin-content .page-title .btn .btn-big {
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+	border: 1px solid #006669;
+	background: transparent;
+	border-radius: 0;
+	color: #006669!important;
+	transform: scale(.8);
+}
+.admin-content .page-title .btn .btn-big:hover {
+	background: #006669;
+	color: white!important;
+	transition: .25s;
 }
 
 table{

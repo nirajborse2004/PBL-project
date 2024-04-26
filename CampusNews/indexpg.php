@@ -182,38 +182,41 @@
                         }
 
                         // Fetch data from the database
-                        $sql = "SELECT * FROM posts order by created_at desc";
+                        $sql = "SELECT * FROM userpostreq order by created_at desc";
                         $result = $conn->query($sql);
 
                         // Check if there are any records
                         if ($result->num_rows > 0) {
                             // Output data of each row
+
                             while($row = $result->fetch_assoc()) {
-                                $image_name = $row['image_name'];
-                                $image_data = $row['image_data'];
-                                echo "<div class='post clearfix'>";
-                                // echo "<img class='post-image' src='/admin/posts/uploads/" . $row["image"] . "' alt='" . $row["title"] ." '>";
-                                echo "<img class='post-image' src='data:image/jpeg;base64," . base64_encode($image_data) . "' alt='" . $image_name . "'>";
-                                echo "<div class='post-preview'>";
-                                echo "<h3><a href='/php/single.php'>" . $row["title"] . "</a></h3>";
-                                echo "&nbsp";
-                                echo "<span id='category'>Tech</span>";
-                                echo "<p class='preview-text'>" . $row["body"] . "</p>";
-                                echo "<p class='fa calender'>" . $row["created_at"] . "</p>";
-                                // echo "<img src='uploads/" . $row["image"] . "' alt='" . $row["title"] .    "'>";
-                                echo "<a href='/php/single.php' class='btn read-more'>Read More</a> ";
-                                echo "</div>";
-                                echo "</div>";
-                            }
+								if($row['approved']=='Approved'){
+
+									$image_name = $row['image_name'];
+									$image_data = $row['image_data'];
+									echo "<div class='post clearfix'>";
+									// echo "<img class='post-image' src='/admin/posts/uploads/" . $row["image"] . "' alt='" . $row["title"] ." '>";
+									echo "<img class='post-image' src='data:image/jpeg;base64," . base64_encode($image_data) . "' alt='" . $image_name . "'>";
+									echo "<div class='post-preview'>";
+									echo "<h3><a href='/php/single.php'>" . $row["title"] . "</a></h3>";
+									echo "&nbsp";
+									echo "<span id='category'>Tech</span>";
+									echo "<p class='preview-text'>" . $row["body"] . "</p>";
+									echo "<p class='fa calender'>" . $row["created_at"] . "</p>";
+									// echo "<img src='uploads/" . $row["image"] . "' alt='" . $row["title"] .    "'>";
+									echo "<a href='/php/single.php' class='btn read-more'>Read More</a> ";
+									echo "</div>";
+									echo "</div>";
+                            }}
                         } else {
-                            echo "0 results";
+                            echo "";
                         }
 
                         // Close connection
                         $conn->close();
                         ?>
 
-<div class="post clearfix">
+				<div class="post clearfix">
 					<img src="/singlepost/image_2.png" alt="" class="post-image">
 					<div class="post-preview clearfix">
 						<h3><a href="/singlepost/post1.html">Science exhibitions have long been cherished as a platform where wonder meets education, where curiosity is sparked, and where innovation takes center stage.</a></h3>

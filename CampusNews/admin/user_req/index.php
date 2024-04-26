@@ -71,7 +71,7 @@
                 }
 
                 // Fetch data from the database
-                $sql = "SELECT * FROM posts order by created_at desc";
+                $sql = "SELECT * FROM userpostreq order by created_at desc";
                 $result = $conn->query($sql);
 
                 // Check if there are any records
@@ -87,19 +87,29 @@
                     // Output data of each row
                     while($row = $result->fetch_assoc()) {
                         echo "<tbody>";
+                        /*
+                        $id=$row["id"];
+                        global $id;
+                        */
                         echo "<tr>";
                         echo "<td>" . $row["title"] . "</td>";
                         echo "<td>" . $row["created_at"] . "</td>";
-                        echo "<td><button type='submit' class='btn btn-big'><a href=''>Approve</a></button></td>";
+
+                        echo "<td>" . '<form action="post.php" method="post" enctype="multipart/form-data"><input type="hidden" name="id" value="' . $row["id"] . '"><input type="submit" name="submit" value="' . $row["approved"] . '" class="btn btn-big"></form>' . "</td>";
+
+
+
                         echo "</tr>";
                     }
                     echo "</tbody>";
                     echo "</table>";
                 } else {
-                    echo "0 results";
+                    echo "<div class='content'>";
+                    echo "<h3>No Posts Request Yet</h3>";
+                    echo "</div>";
                 }
                 // Close connection
-                $conn->close();
+                //$conn->close();
                 ?>
             </div>
             <!-- admin content -->

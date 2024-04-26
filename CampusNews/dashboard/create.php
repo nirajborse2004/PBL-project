@@ -36,10 +36,6 @@
         <!--left sidebar  -->
         <div class="left-sidebar">
             <ul>
-                <li><a href="index.php">Manage Posts</a></li>
-                <li><a href="/admin/users/index.php">Manage Users</a></li>
-                <li><a href="/admin/topics/index.html">Manage Topics</a></li>
-                <li><a href="/admin/user_req/index.php">Manage User Request</a></li>
             </ul>
         </div>
         <!--/left sidebar  -->
@@ -52,38 +48,40 @@
             </div>
             <div class="content">
                 <h2 class="page-title">Manage Posts</h2>
-                <form action="/admin/posts/post.php" method="post" enctype="multipart/form-data">
-                    <div>
+                <form action="/dashboard/post.php" method="post" enctype="multipart/form-data">
+                    <div class="input-data">
                         <h3><label>Title</label></h3>
                         <input type="text" name="title" class="text-input" required>
                     </div>
-                    <div>
+                    <div class="input-data">
                         <h3><label>Body</label></h3>
                         <input type="text" name="body" class="text-input" required>
                     </div>
-                    <div>
+                    <div class="input-data">
                         <h3><label>Main Body</label></h3>
-                        <input type="text" name="main_body" class="text-input" required>
+                        <textarea name="message" class="text-input contact-input" placeholder="Your message...." required></textarea>
                     </div>
-                    <div>
+                    <div class="input-data">
                         <h3>Upload Image</h3>
                         <input type="file" name="image" class="text-input" required>
                     </div>
-                    <input type="submit" name="submit" value="Add Post" class="btn btn-big">
+                    <input type="submit" name="submit" value="Add Post Request" class="btn btn-big">
                 </form>
+
             </div>
+            <a href='/indexpg.php' class='btn btn-big'>Back to Home</a>
         </div>
         <!-- admin content -->
     </div>
     <!-- /page  wrapper -->
 
-        <!-- JQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-        <script src="/ckeditor/ckeditor5-build-classic/ckeditor.js"></script>
+    <script src="/ckeditor/ckeditor5-build-classic/ckeditor.js"></script>
 
-        <!-- Custom script -->
-        <script src="/js/scripts.js"></script>
+    <!-- Custom script -->
+    <script src="/js/scripts.js"></script>
 </body>
 </html>
- required
+

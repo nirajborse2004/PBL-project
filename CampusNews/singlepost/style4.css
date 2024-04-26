@@ -7,7 +7,7 @@ body{
     margin:0;
     font-family: 'Lora';
     /* Set the background image */
-    background-image: url(doodle4.png);
+    background-image: url(doodle6.png);
 
     /* Adjust background properties */
     background-size: cover; /* Adjusts the size of the background image */
@@ -433,7 +433,7 @@ a {
     }
     */
 /*========================================================================================================*/
-    
+
 /*========MEDIA ADJUST=========*/
 @media only screen and (max-width:770px){
     .blog-wrapper{

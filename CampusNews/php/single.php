@@ -97,7 +97,7 @@
                 echo "<p class='fa calender'>" . $row["created_at"] . "</p>";
 
                 echo "<div class='about-author'>";
-				echo "By ~ <span id='author'>Saindane Yughandar</span><br>";
+				echo "By ~ <span id='author'>TrendCast</span><br>";
 				echo "Contact : <span id='email'>abc@gmail.com</span>";
 				echo "</div>";
 

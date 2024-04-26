@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $image_name = $_FILES['image']['name'];
 
     $img_data = addslashes(file_get_contents($image));
-    $sql = "INSERT INTO posts (title, body, main_body, image_name, image_data) VALUES ('$title','$body','$main_body','$image_name', '$img_data')";
+    $sql = "INSERT INTO userpostreq (title, body, main_body, image_name, image_data,approved) VALUES ('$title','$body','$main_body','$image_name', '$img_data','Approve')";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: index.php");
@@ -33,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Close connection
-    $stmt->close();
     $conn->close();
 }
 ?>

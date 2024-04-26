@@ -101,7 +101,9 @@
                     echo "</tbody>";
                     echo "</table>";
                 } else {
-                    echo "0 results";
+                    echo "<div class='content'>";
+                    echo "<h3>No Posts Yet</h3>";
+                    echo "</div>";
                 }
                 // Close connection
                 $conn->close();
